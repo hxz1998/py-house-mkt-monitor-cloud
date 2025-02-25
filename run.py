@@ -3,6 +3,7 @@ from house_mkt_monitor.core.crawler import crawl_data
 from house_mkt_monitor.core.config import house_mkt_data_url
 from house_mkt_monitor.core.db_writer import save
 import os
+from house_mkt_monitor.core.generate_report import generate_report
 
 if __name__ == '__main__':
     logger.info("服务启动……")
@@ -12,3 +13,5 @@ if __name__ == '__main__':
     db = os.path.abspath(os.path.dirname(__file__) + "/database/data.db")
     save(data, db)
     logger.info("存储完成")
+    logger.info("准备生成报告")
+    generate_report(db, "house_mkt_data")
