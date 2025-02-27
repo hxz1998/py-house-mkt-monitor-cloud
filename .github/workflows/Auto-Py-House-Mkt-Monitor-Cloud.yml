@@ -5,7 +5,7 @@ name: Auto-Py-House-Mkt-Monitor-Cloud
 
 on:
   schedule:
-    - cron: '0 15 * * *'  # 每天的 UTC 时间 15:00 运行（即东八区 23:00）
+    - cron: '0 1-15 * * *'  # 每天的 UTC 时间 15:00 运行（即东八区 23:00）
   workflow_dispatch:     # 允许手动触发
 
 permissions:
