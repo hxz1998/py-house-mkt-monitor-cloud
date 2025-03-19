@@ -66,10 +66,10 @@ def generate_graph(db_path):
     plt.ylabel('Count', fontsize=14)
     # 添加图例
     plt.legend(fontsize=12)
+    plt.grid(visible=True)
 
     # 保存图表到本地
     plt.savefig('./report/house_mkt_data_plot.png', bbox_inches='tight')
-    plt.grid(visible=True)
     # 显示图表
     plt.show()
 
