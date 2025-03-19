@@ -54,7 +54,7 @@ def generate_report(db_path, table_name):
     column_names, rows = fetch_data_from_db(db_path, table_name)
 
     # 输出Markdown文件的路径
-    output_file = './README.md'
+    output_file = './report.md'
 
     # 生成Markdown文本
     markdown = generate_markdown(column_names, rows, exclude_column='raw_text')

@@ -4,6 +4,7 @@ from house_mkt_monitor.core.config import house_mkt_data_url
 from house_mkt_monitor.core.db_writer import save
 import os
 from house_mkt_monitor.core.generate_report import generate_report
+from house_mkt_monitor.core.generate_graph import generate_graph
 
 if __name__ == '__main__':
     logger.info("服务启动……")
@@ -15,3 +16,4 @@ if __name__ == '__main__':
     logger.info("存储完成")
     logger.info("准备生成报告")
     generate_report(db, "house_mkt_data")
+    generate_graph(db)
